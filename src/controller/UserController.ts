@@ -1,5 +1,5 @@
-import { Request, Response } from "express"
-import { getCustomRepository } from "typeorm"
+import { Request, Response } from 'express'
+import { getCustomRepository } from 'typeorm'
 import UsersRepository from '../repositories/UsersRepository'
 
 class UserController {
@@ -10,7 +10,7 @@ class UserController {
         try {
             const userAlreadyExists = await usersRepository.findOne({ email })
             if (userAlreadyExists) return res.status(400).json({
-                message: "User alteady exists!",
+                message: 'User alteady exists!',
                 email: userAlreadyExists.email
             })
 
