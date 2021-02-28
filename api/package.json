@@ -6,6 +6,7 @@
   "scripts": {
     "dev": "tsnd -r dotenv/config --transpile-only --ignore-watch node_modules src/bin/server.ts",
     "typeorm": "tsnd node_modules/typeorm/cli.js",
+    "build": "tsc",
     "test": "NODE_ENV=test jest -i"
   },
   "dependencies": {
