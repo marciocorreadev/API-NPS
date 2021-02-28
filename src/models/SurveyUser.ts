@@ -4,7 +4,7 @@ import Survey from './Survey'
 import User from './User'
 
 @Entity('surveys_users')
-class SurveyUser {
+export default class SurveyUser {
     @PrimaryColumn()
     readonly id: string
 
@@ -32,5 +32,3 @@ class SurveyUser {
         if (!this.id) this.id = uuid()
     }
 }
-
-export default SurveyUser

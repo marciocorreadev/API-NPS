@@ -1,7 +1,7 @@
 import { Column, CreateDateColumn, Entity, PrimaryColumn } from 'typeorm'
 import { v4 as uuid } from 'uuid'
 @Entity('surveys')
-class Survey {
+export default class Survey {
     @PrimaryColumn()
     readonly id: string
 
@@ -18,5 +18,3 @@ class Survey {
         if (!this.id) this.id = uuid()
     }
 }
-
-export default Survey

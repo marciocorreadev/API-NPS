@@ -1,8 +1,9 @@
 import { Request, Response } from 'express'
 import { getCustomRepository, IsNull, Not } from 'typeorm'
 import SurveysUsersRepository from '../repositories/SurveysUsersRepository'
+import AppError from '../errors/AppErro';
 
-class NpsController {
+export default class NpsController {
     async execute(request: Request, response: Response) {
         const { params: { survey_id } } = request
         try {
@@ -17,9 +18,7 @@ class NpsController {
 
             return response.status(200).json({ detractors, promoters, passive, totalAnswers, calculate })
         } catch (error) {
-            response.status(500).json({ error })
+            throw new AppError(error.message, 500)
         }
     }
 }
-
-export default NpsController
