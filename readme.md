@@ -17,7 +17,7 @@
 - Register Searches
 - Answer Surveys
 - NPS Calculate
-- 
+
 ## Installation
 
 ```sh
