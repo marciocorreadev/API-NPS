@@ -6,12 +6,15 @@
   "scripts": {
     "dev": "tsnd -r dotenv/config --transpile-only --ignore-watch node_modules src/bin/server.ts",
     "typeorm": "tsnd node_modules/typeorm/cli.js",
-    "test": "NODE_ENV=test jest",
+    "test": "NODE_ENV=test jest --runInBand",
     "posttest": "rm -rf ./src/database/database.test.sqlite"
   },
   "dependencies": {
+    "@types/nodemailer": "^6.4.0",
     "dotenv-safe": "^8.2.0",
     "express": "^4.17.1",
+    "handlebars": "^4.7.7",
+    "nodemailer": "^6.5.0",
     "uuid": "^8.3.2"
   },
   "devDependencies": {

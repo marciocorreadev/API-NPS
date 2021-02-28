@@ -1,8 +1,6 @@
 import 'reflect-metadata'
 import createConnection from '../database'
-import config from '../config'
 import app from '../app'
-
 class Server {
     static async start(port: number | string): Promise<void> {
         try {
@@ -16,4 +14,4 @@ class Server {
     }
 }
 
-Server.start(config.app.port)
+Server.start(process.env.PORT)
