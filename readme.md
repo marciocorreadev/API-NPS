@@ -13,11 +13,11 @@
 - sqlite3
 
 ## Features
-- Cadastrar usuários
-- Cadastrar Pesquisas
-- Responder Pesquisas
-- Calcular NPS
-
+- Register users
+- Register Searches
+- Answer Surveys
+- NPS Calculate
+- 
 ## Installation
 
 ```sh
